@@ -155,11 +155,11 @@ def explore():
     return render_template('index.html', title='Explore', posts=posts.items,
                            next_url=next_url, prev_url=prev_url)
 
-@app.route('/reset_password_request')
-def reset_passowrd_request():
+@app.route('/reset_password_request', methods=['GET', 'POST'])
+def reset_password_request():
     if current_user.is_authenticated:
         return redirect(url_for('index'))
-    form = ResetPasswordRequestForm
+    form = ResetPasswordRequestForm()
     if form.validate_on_submit():
         user = User.query.filter_by(email=form.email.data).first()
         if user:
