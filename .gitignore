@@ -5,3 +5,4 @@ venv
 app/__pacache__
 migrations
 logs
+messages.pot

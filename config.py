@@ -17,3 +17,5 @@ class Config(object):
     MAIL_PASSWORD = os.environ.get('MAIL_PASSWORD')
     MAIL_USE_SSL = os.environ.get('MAIL_USE_SLL')
     ADMINS = ['wugd.dev@yandex.ru']
+    LANGUAGES = ['en', 'ru']
+
